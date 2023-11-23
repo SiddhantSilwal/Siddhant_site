@@ -10,10 +10,25 @@
 body
 {
     min-height: 100vh;
-    background: #300050;
-    overflow-x: hidden;
-    
-}
+    background: linear-gradient(#300050, #00437a);
+    overflow-x: hidden;}
+
+
+    body::-webkit-scrollbar {
+        width: 6px;
+        background:#360055;
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background: linear-gradient(transparent, #ffffff);
+        border-radius: 6px;
+        border-radius: 20px;
+      }
+      
+      body::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(transparent, #00c6ff, transparent);
+      }
+
 header
 {
     position: absolute;
@@ -55,8 +70,8 @@ header ul li a.active
     background-color: #fff;
     color: #2b1055;
 }
-.home
-{
+
+section{
     position: relative;
     width: 100%;
     height: 100vh;
@@ -66,17 +81,34 @@ header ul li a.active
     align-items: center;
     overflow: hidden;
 }
-.home::before
+section::before
 {
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, #46006f,transparent);
+    background: linear-gradient(to top, #2a1d5c,transparent);
     z-index: 1000;
 }
-.home img
+section.content::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, #1c1366,transparent);
+    z-index: 1000;
+}
+section.content::before
+{
+    height: 50px;
+
+    background: linear-gradient(to top, #00437a,transparent);
+    z-index: 1000;
+}
+section img
 {
     position: absolute;
     top: 0;
@@ -85,11 +117,11 @@ header ul li a.active
     height: 100%;
     object-fit: cover;
 }
-.home img#front_planets
+section img#front_planets
 {
     z-index: 10;
 }
-.home img#bg
+section img#bg
 {
     z-index: -10000;
 }
@@ -103,6 +135,7 @@ header ul li a.active
 }
 #text
 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     position: absolute;
     color: #fff;
     white-space: nowrap;
@@ -121,33 +154,6 @@ header ul li a.active
     z-index: 1000000;
     transform: translateY(200px);
 }
-.content
-{
-    position: relative;
-    padding: 100px;
-    background-color: #46006f;
-}
-.content h2
-{
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-.content p
-{
-    font-size: 1em;
-    color: #fff;
-}
-
-.bodi
-{
-    position: absolute;
-    top: 14rem;
-    margin-left: 4em;
-    float: left;
-    margin-right: 4em;
-
-}
 
 .list-heading {
     font-weight: normal;
@@ -156,8 +162,9 @@ header ul li a.active
     
 }
 
-.menu
+/* .menu
 {
+    margin-top: 1vh;
     float: left;
     width: 30%;
     overflow: hidden;
@@ -186,7 +193,7 @@ header ul li a.active
     background-color: #49007a;
     border-radius: 10px;
     padding: 1rem;
-}
+} */
 @keyframes astronaut 
 {
     0%

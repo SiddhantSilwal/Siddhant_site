@@ -1,3 +1,4 @@
+
 let stars = document.getElementById('star')
 let front_planets = document.getElementById('front_planets')
 let back_planets = document.getElementById('back_planets')
