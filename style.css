@@ -32,7 +32,7 @@ body
 header
 {
     position: absolute;
-    top: 0;
+    top: 2vh;
     left: 0;
     width: 100%;
     display: flex;
@@ -41,7 +41,11 @@ header
 }
 header .logo
 {
-    margin-top: 10px;
+    font-size: 3rem;
+    margin-top: 2vh;
+    margin-left: 9vw;
+    line-height: 2.3rem;
+    color: #fff;
 }
 
 header ul
@@ -49,8 +53,8 @@ header ul
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4em;
-    padding: 10px 100px;;
+    font-size: 2rem;
+    padding: 10px 100px;
 }
 header ul li
 {
@@ -58,7 +62,38 @@ header ul li
     margin-left: 20px;
 }
 header ul li a
-{
+{.menu
+    {
+        margin-top: 1vh;
+        float: left;
+        width: 30%;
+        overflow: hidden;
+        position: fixed;
+    }
+    
+    .menu li
+    {
+        list-style: none;
+        border-color: rgb(255, 0, 0);
+        border-left-width: 1px;
+        border-left-style: ridge;
+        color: rgb(192, 184, 184);
+        padding-left: 1rem;
+    }
+    .items
+    {
+        height: 100%;
+        float: right;
+        width: 70%; 
+        position: relative;    
+    }
+    .items div
+    {
+        margin: 1rem;
+        background-color: #49007a;
+        border-radius: 10px;
+        padding: 1rem;
+    }
     text-decoration: none;
     padding: 6px 15px;
     color: #fff;
@@ -157,43 +192,64 @@ section img#bg
 
 .list-heading {
     font-weight: normal;
-    border-left-width: 2px;
+    border-left-width: 2px;    background-color: black;
+
     color: #fff;
     
 }
 
-/* .menu
+.content svg
 {
-    margin-top: 1vh;
-    float: left;
-    width: 30%;
-    overflow: hidden;
-    position: fixed;
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    z-index: 1000;
 }
 
-.menu li
+.caro
 {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.caro img
+{
+    height: auto;
+    width: auto;
+    position: relative;
+    object-fit: none;
+    margin: 5vw;
+}
+
+.caro ul
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
     list-style: none;
-    border-color: rgb(255, 0, 0);
-    border-left-width: 1px;
-    border-left-style: ridge;
-    color: rgb(192, 184, 184);
-    padding-left: 1rem;
 }
-.items
+
+.caro ul li
 {
-    height: 100%;
-    float: right;
-    width: 70%; 
-    position: relative;    
+    background-color: rgb(255, 208, 0);
+    border-radius: 5%;
+    margin-left: 3vw;
+    color: #3f3f3f;
+    text-align: center;
+    padding: 4vh;
+
 }
-.items div
+.caro ul li i
 {
-    margin: 1rem;
-    background-color: #49007a;
-    border-radius: 10px;
-    padding: 1rem;
-} */
+    font-size: 5rem;
+    display: block;
+}
+
+
+
 @keyframes astronaut 
 {
     0%
