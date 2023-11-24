@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+:root
+{
+    --btn-txt: 1.4rem;
+}
 *
 {
     margin: 0;
@@ -53,7 +57,7 @@ header ul
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: var(--btn-txt);
     padding: 10px 100px;
 }
 header ul li
@@ -184,7 +188,7 @@ section img#bg
     padding: 8px 30px;
     border-radius: 40px;
     background-color: #fff;
-    font-size: 1.5em;
+    font-size: var(--btn-txt);
     color: #48005e;
     z-index: 1000000;
     transform: translateY(200px);
@@ -200,9 +204,12 @@ section img#bg
 
 .content svg
 {
+    width: 1338px;
+    height: auto;
+    fill: none;
     position: absolute;
     top: 20%;
-    left: 43%;
+    left: 45%;
     z-index: 1000;
 }
 
@@ -221,7 +228,7 @@ section img#bg
     width: auto;
     position: relative;
     object-fit: none;
-    margin: 5vw;
+    margin: 3vw;
 }
 
 .caro ul
@@ -236,15 +243,15 @@ section img#bg
 {
     background-color: rgb(255, 208, 0);
     border-radius: 5%;
-    margin-left: 3vw;
+    margin-left: 2vw;
     color: #3f3f3f;
     text-align: center;
-    padding: 4vh;
+    padding: 3rem;
 
 }
 .caro ul li i
 {
-    font-size: 5rem;
+    font-size: 3rem;
     display: block;
 }
 
